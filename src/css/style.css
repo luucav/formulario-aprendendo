@@ -1,6 +1,8 @@
 :root {
     --input-linear: linear-gradient(120deg, #E75590, #00C2CB);
     --button-linear: linear-gradient(120deg, #E75590, #00C2CB, #E75590);
+    --input-error: red;
+    --button-disabled: #ACACAC;
 }
 
 
@@ -74,6 +76,12 @@ body {
 }
 
 
+.login-input-border.error {
+    background: var(--input-error);
+}
+
+
+
 .login__submit {
     height: 48px;
     width: 100%;
@@ -89,6 +97,13 @@ body {
     cursor: pointer;
     transition: .5s ease-in-out;
 }
+
+
+.login__submit:disabled {
+    background: var(--button-disabled);
+    cursor: not-allowed;
+}
+
 
 .login__submit:hover {
     background-position: right;
